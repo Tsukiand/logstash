@@ -51,6 +51,7 @@ public final class PluginHelper {
     /**
      * Returns a list of the options that are common to all input plugins.
      */
+    @SuppressWarnings("unchecked")
     public static Collection<PluginConfigSpec<?>> commonInputOptions() {
         return commonInputOptions(Collections.EMPTY_LIST);
     }
@@ -68,6 +69,7 @@ public final class PluginHelper {
     /**
      * Returns a list of the options that are common to all output plugins.
      */
+    @SuppressWarnings("unchecked")
     public static Collection<PluginConfigSpec<?>> commonOutputOptions() {
         return commonOutputOptions(Collections.EMPTY_LIST);
     }
@@ -84,6 +86,7 @@ public final class PluginHelper {
     /**
      * Returns a list of the options that are common to all filter plugins.
      */
+    @SuppressWarnings("unchecked")
     public static Collection<PluginConfigSpec<?>> commonFilterOptions() {
         return commonFilterOptions(Collections.EMPTY_LIST);
     }
@@ -99,6 +102,7 @@ public final class PluginHelper {
                 REMOVE_TAG_CONFIG*/));
     }
 
+    @SuppressWarnings("rawtypes")
     private static Collection<PluginConfigSpec<?>> combineOptions(
             Collection<PluginConfigSpec<?>> providedOptions,
             Collection<PluginConfigSpec<?>> commonOptions) {
